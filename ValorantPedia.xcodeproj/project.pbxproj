@@ -1,0 +1,757 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6008810C2ACBE78F00022CD1 /* GunDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6008810B2ACBE78F00022CD1 /* GunDetailView.swift */; };
+		6058375D2AAA1FE000A65AA3 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058375C2AAA1FE000A65AA3 /* OnboardingView.swift */; };
+		6058375F2AAA20B400A65AA3 /* AgentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058375E2AAA20B400A65AA3 /* AgentCardView.swift */; };
+		605837632AAA21A700A65AA3 /* AgentsOnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605837622AAA21A700A65AA3 /* AgentsOnboardingData.swift */; };
+		605837652AAA249200A65AA3 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605837642AAA249200A65AA3 /* StartButtonView.swift */; };
+		605837672AAB468D00A65AA3 /* DetailAgentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605837662AAB468D00A65AA3 /* DetailAgentView.swift */; };
+		605837692AAB490E00A65AA3 /* AgentHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605837682AAB490E00A65AA3 /* AgentHeaderView.swift */; };
+		6058376D2AAB4B9C00A65AA3 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058376C2AAB4B9C00A65AA3 /* Color+Extension.swift */; };
+		6058376F2AAB60AB00A65AA3 /* AbilitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058376E2AAB60AB00A65AA3 /* AbilitiesView.swift */; };
+		605837712AAB649400A65AA3 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605837702AAB649400A65AA3 /* CustomTabBar.swift */; };
+		605837732AAB69D900A65AA3 /* TabCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605837722AAB69D900A65AA3 /* TabCurve.swift */; };
+		605837752AABB8CB00A65AA3 /* AgentListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605837742AABB8CB00A65AA3 /* AgentListView.swift */; };
+		605837772AABBD4100A65AA3 /* MainAgentCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605837762AABBD4100A65AA3 /* MainAgentCardView.swift */; };
+		605837792AAD001F00A65AA3 /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605837782AAD001F00A65AA3 /* MapModel.swift */; };
+		6058377B2AAD1DE300A65AA3 /* MapListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058377A2AAD1DE300A65AA3 /* MapListView.swift */; };
+		607E05BA2ACEB75300BD97E3 /* GunInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607E05B92ACEB75300BD97E3 /* GunInfoView.swift */; };
+		607E05BC2ACEDA9000BD97E3 /* GroupBoxRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607E05BB2ACEDA9000BD97E3 /* GroupBoxRowView.swift */; };
+		607E05BE2ACEDD7000BD97E3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607E05BD2ACEDD7000BD97E3 /* String+Extension.swift */; };
+		60887F272AC9E05700FCFD13 /* GunRowListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60887F262AC9E05700FCFD13 /* GunRowListView.swift */; };
+		609BF5C52AC74E6000035F8A /* GunModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609BF5C42AC74E5F00035F8A /* GunModel.swift */; };
+		609BF5C72AC7574B00035F8A /* GunsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 609BF5C62AC7574B00035F8A /* GunsListView.swift */; };
+		60E002BD2AAA0B9900D6B0B4 /* ValoarntPediaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E002BC2AAA0B9900D6B0B4 /* ValoarntPediaApp.swift */; };
+		60E002BF2AAA0B9900D6B0B4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E002BE2AAA0B9900D6B0B4 /* MainView.swift */; };
+		60E002C12AAA0B9A00D6B0B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60E002C02AAA0B9A00D6B0B4 /* Assets.xcassets */; };
+		60E002C42AAA0B9A00D6B0B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60E002C32AAA0B9A00D6B0B4 /* Preview Assets.xcassets */; };
+		60E002CE2AAA0B9A00D6B0B4 /* ValoarntPediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E002CD2AAA0B9A00D6B0B4 /* ValoarntPediaTests.swift */; };
+		60E002EB2AAA0C2900D6B0B4 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E002EA2AAA0C2900D6B0B4 /* Bundle+Extension.swift */; };
+		60E002ED2AAA0EC100D6B0B4 /* ValorantManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E002EC2AAA0EC100D6B0B4 /* ValorantManager.swift */; };
+		60E002EF2AAA10FD00D6B0B4 /* AgentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E002EE2AAA10FD00D6B0B4 /* AgentModel.swift */; };
+		60E002F12AAA13C700D6B0B4 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E002F02AAA13C700D6B0B4 /* ViewModel.swift */; };
+		60E089222AC4BBD20008ED62 /* MapRowListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E089212AC4BBD20008ED62 /* MapRowListView.swift */; };
+		60E089242AC61FEA0008ED62 /* MapDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E089232AC61FEA0008ED62 /* MapDetailView.swift */; };
+		60E089262AC621E10008ED62 /* HeadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E089252AC621E10008ED62 /* HeadingView.swift */; };
+		60E913C52ACBEDA1009619BF /* Extension+Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E913C42ACBEDA1009619BF /* Extension+Double.swift */; };
+		60E913C92ACBEE76009619BF /* GunSkinsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E913C82ACBEE76009619BF /* GunSkinsView.swift */; };
+		60F6535B2AD89E4600FADD7F /* InlineSnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 60F6535A2AD89E4600FADD7F /* InlineSnapshotTesting */; };
+		60F6535D2AD89E4600FADD7F /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 60F6535C2AD89E4600FADD7F /* SnapshotTesting */; };
+		60F6535F2AD89E8100FADD7F /* FirstScreenSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F6535E2AD89E8100FADD7F /* FirstScreenSnapshotTests.swift */; };
+		60F653612ADC3EE200FADD7F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F653602ADC3EE200FADD7F /* SettingsView.swift */; };
+		60F653632ADC3F5500FADD7F /* EmailSupportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F653622ADC3F5500FADD7F /* EmailSupportModel.swift */; };
+		60F653652ADC3F8300FADD7F /* UIdevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F653642ADC3F8300FADD7F /* UIdevice+Extension.swift */; };
+		60F653672ADC3FD700FADD7F /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F653662ADC3FD700FADD7F /* Data+Extension.swift */; };
+		60F653692ADC400700FADD7F /* DeviceModels.json in Resources */ = {isa = PBXBuildFile; fileRef = 60F653682ADC400700FADD7F /* DeviceModels.json */; };
+		60F6536B2ADC40DE00FADD7F /* SchameType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F6536A2ADC40DE00FADD7F /* SchameType+Extension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		60E002CA2AAA0B9A00D6B0B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 60E002B12AAA0B9900D6B0B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 60E002B82AAA0B9900D6B0B4;
+			remoteInfo = ValoarntPedia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6008810B2ACBE78F00022CD1 /* GunDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GunDetailView.swift; sourceTree = "<group>"; };
+		6058375C2AAA1FE000A65AA3 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		6058375E2AAA20B400A65AA3 /* AgentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentCardView.swift; sourceTree = "<group>"; };
+		605837622AAA21A700A65AA3 /* AgentsOnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentsOnboardingData.swift; sourceTree = "<group>"; };
+		605837642AAA249200A65AA3 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
+		605837662AAB468D00A65AA3 /* DetailAgentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAgentView.swift; sourceTree = "<group>"; };
+		605837682AAB490E00A65AA3 /* AgentHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentHeaderView.swift; sourceTree = "<group>"; };
+		6058376C2AAB4B9C00A65AA3 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		6058376E2AAB60AB00A65AA3 /* AbilitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilitiesView.swift; sourceTree = "<group>"; };
+		605837702AAB649400A65AA3 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		605837722AAB69D900A65AA3 /* TabCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCurve.swift; sourceTree = "<group>"; };
+		605837742AABB8CB00A65AA3 /* AgentListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentListView.swift; sourceTree = "<group>"; };
+		605837762AABBD4100A65AA3 /* MainAgentCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAgentCardView.swift; sourceTree = "<group>"; };
+		605837782AAD001F00A65AA3 /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
+		6058377A2AAD1DE300A65AA3 /* MapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListView.swift; sourceTree = "<group>"; };
+		607E05B92ACEB75300BD97E3 /* GunInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GunInfoView.swift; sourceTree = "<group>"; };
+		607E05BB2ACEDA9000BD97E3 /* GroupBoxRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupBoxRowView.swift; sourceTree = "<group>"; };
+		607E05BD2ACEDD7000BD97E3 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		60887F262AC9E05700FCFD13 /* GunRowListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GunRowListView.swift; sourceTree = "<group>"; };
+		609BF5C42AC74E5F00035F8A /* GunModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GunModel.swift; sourceTree = "<group>"; };
+		609BF5C62AC7574B00035F8A /* GunsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GunsListView.swift; sourceTree = "<group>"; };
+		60E002B92AAA0B9900D6B0B4 /* ValorantPedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValorantPedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60E002BC2AAA0B9900D6B0B4 /* ValoarntPediaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValoarntPediaApp.swift; sourceTree = "<group>"; };
+		60E002BE2AAA0B9900D6B0B4 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		60E002C02AAA0B9A00D6B0B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		60E002C32AAA0B9A00D6B0B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		60E002C92AAA0B9A00D6B0B4 /* ValorantPediaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValorantPediaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		60E002CD2AAA0B9A00D6B0B4 /* ValoarntPediaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValoarntPediaTests.swift; sourceTree = "<group>"; };
+		60E002EA2AAA0C2900D6B0B4 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		60E002EC2AAA0EC100D6B0B4 /* ValorantManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValorantManager.swift; sourceTree = "<group>"; };
+		60E002EE2AAA10FD00D6B0B4 /* AgentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentModel.swift; sourceTree = "<group>"; };
+		60E002F02AAA13C700D6B0B4 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		60E089212AC4BBD20008ED62 /* MapRowListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRowListView.swift; sourceTree = "<group>"; };
+		60E089232AC61FEA0008ED62 /* MapDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailView.swift; sourceTree = "<group>"; };
+		60E089252AC621E10008ED62 /* HeadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingView.swift; sourceTree = "<group>"; };
+		60E913C42ACBEDA1009619BF /* Extension+Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Double.swift"; sourceTree = "<group>"; };
+		60E913C82ACBEE76009619BF /* GunSkinsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GunSkinsView.swift; sourceTree = "<group>"; };
+		60F6535E2AD89E8100FADD7F /* FirstScreenSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenSnapshotTests.swift; sourceTree = "<group>"; };
+		60F653602ADC3EE200FADD7F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		60F653622ADC3F5500FADD7F /* EmailSupportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailSupportModel.swift; sourceTree = "<group>"; };
+		60F653642ADC3F8300FADD7F /* UIdevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIdevice+Extension.swift"; sourceTree = "<group>"; };
+		60F653662ADC3FD700FADD7F /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		60F653682ADC400700FADD7F /* DeviceModels.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DeviceModels.json; sourceTree = "<group>"; };
+		60F6536A2ADC40DE00FADD7F /* SchameType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SchameType+Extension.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60E002B62AAA0B9900D6B0B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60E002C62AAA0B9A00D6B0B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60F6535B2AD89E4600FADD7F /* InlineSnapshotTesting in Frameworks */,
+				60F6535D2AD89E4600FADD7F /* SnapshotTesting in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		605837602AAA20BD00A65AA3 /* ReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				60F6536F2ADC449700FADD7F /* TabBarView */,
+				60F6536E2ADC446500FADD7F /* MapView */,
+				60F6536D2ADC443600FADD7F /* GunView */,
+				60F6536C2ADC442200FADD7F /* AgentView */,
+				605837642AAA249200A65AA3 /* StartButtonView.swift */,
+				60E089252AC621E10008ED62 /* HeadingView.swift */,
+				607E05BB2ACEDA9000BD97E3 /* GroupBoxRowView.swift */,
+			);
+			path = ReusableView;
+			sourceTree = "<group>";
+		};
+		605837612AAA219100A65AA3 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				605837622AAA21A700A65AA3 /* AgentsOnboardingData.swift */,
+				60F653682ADC400700FADD7F /* DeviceModels.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		60E002B02AAA0B9900D6B0B4 = {
+			isa = PBXGroup;
+			children = (
+				60E002BB2AAA0B9900D6B0B4 /* ValoarntPedia */,
+				60E002CC2AAA0B9A00D6B0B4 /* ValoarntPediaTests */,
+				60E002BA2AAA0B9900D6B0B4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		60E002BA2AAA0B9900D6B0B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60E002B92AAA0B9900D6B0B4 /* ValorantPedia.app */,
+				60E002C92AAA0B9A00D6B0B4 /* ValorantPediaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60E002BB2AAA0B9900D6B0B4 /* ValoarntPedia */ = {
+			isa = PBXGroup;
+			children = (
+				60E002BC2AAA0B9900D6B0B4 /* ValoarntPediaApp.swift */,
+				605837612AAA219100A65AA3 /* Data */,
+				60E002E92AAA0BC600D6B0B4 /* ViewModel */,
+				60E002E82AAA0BC200D6B0B4 /* Model */,
+				605837602AAA20BD00A65AA3 /* ReusableView */,
+				60E002E72AAA0BBC00D6B0B4 /* View */,
+				60E002E62AAA0BB500D6B0B4 /* Extension */,
+				60E002C02AAA0B9A00D6B0B4 /* Assets.xcassets */,
+				60E002C22AAA0B9A00D6B0B4 /* Preview Content */,
+			);
+			path = ValoarntPedia;
+			sourceTree = "<group>";
+		};
+		60E002C22AAA0B9A00D6B0B4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				60E002C32AAA0B9A00D6B0B4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		60E002CC2AAA0B9A00D6B0B4 /* ValoarntPediaTests */ = {
+			isa = PBXGroup;
+			children = (
+				60E002CD2AAA0B9A00D6B0B4 /* ValoarntPediaTests.swift */,
+				60F6535E2AD89E8100FADD7F /* FirstScreenSnapshotTests.swift */,
+			);
+			path = ValoarntPediaTests;
+			sourceTree = "<group>";
+		};
+		60E002E62AAA0BB500D6B0B4 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				60E002EA2AAA0C2900D6B0B4 /* Bundle+Extension.swift */,
+				60F653662ADC3FD700FADD7F /* Data+Extension.swift */,
+				6058376C2AAB4B9C00A65AA3 /* Color+Extension.swift */,
+				60E913C42ACBEDA1009619BF /* Extension+Double.swift */,
+				607E05BD2ACEDD7000BD97E3 /* String+Extension.swift */,
+				60F653642ADC3F8300FADD7F /* UIdevice+Extension.swift */,
+				60F6536A2ADC40DE00FADD7F /* SchameType+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		60E002E72AAA0BBC00D6B0B4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				60E002BE2AAA0B9900D6B0B4 /* MainView.swift */,
+				6058375C2AAA1FE000A65AA3 /* OnboardingView.swift */,
+				60F653602ADC3EE200FADD7F /* SettingsView.swift */,
+				60E089232AC61FEA0008ED62 /* MapDetailView.swift */,
+				6008810B2ACBE78F00022CD1 /* GunDetailView.swift */,
+				605837662AAB468D00A65AA3 /* DetailAgentView.swift */,
+				605837702AAB649400A65AA3 /* CustomTabBar.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60E002E82AAA0BC200D6B0B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60E002EE2AAA10FD00D6B0B4 /* AgentModel.swift */,
+				605837782AAD001F00A65AA3 /* MapModel.swift */,
+				609BF5C42AC74E5F00035F8A /* GunModel.swift */,
+				60F653622ADC3F5500FADD7F /* EmailSupportModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		60E002E92AAA0BC600D6B0B4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				60E002EC2AAA0EC100D6B0B4 /* ValorantManager.swift */,
+				60E002F02AAA13C700D6B0B4 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		60F6536C2ADC442200FADD7F /* AgentView */ = {
+			isa = PBXGroup;
+			children = (
+				6058376E2AAB60AB00A65AA3 /* AbilitiesView.swift */,
+				6058375E2AAA20B400A65AA3 /* AgentCardView.swift */,
+				605837682AAB490E00A65AA3 /* AgentHeaderView.swift */,
+				605837742AABB8CB00A65AA3 /* AgentListView.swift */,
+				605837762AABBD4100A65AA3 /* MainAgentCardView.swift */,
+			);
+			path = AgentView;
+			sourceTree = "<group>";
+		};
+		60F6536D2ADC443600FADD7F /* GunView */ = {
+			isa = PBXGroup;
+			children = (
+				609BF5C62AC7574B00035F8A /* GunsListView.swift */,
+				60E913C82ACBEE76009619BF /* GunSkinsView.swift */,
+				60887F262AC9E05700FCFD13 /* GunRowListView.swift */,
+				607E05B92ACEB75300BD97E3 /* GunInfoView.swift */,
+			);
+			path = GunView;
+			sourceTree = "<group>";
+		};
+		60F6536E2ADC446500FADD7F /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				6058377A2AAD1DE300A65AA3 /* MapListView.swift */,
+				60E089212AC4BBD20008ED62 /* MapRowListView.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		60F6536F2ADC449700FADD7F /* TabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				605837722AAB69D900A65AA3 /* TabCurve.swift */,
+			);
+			path = TabBarView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		60E002B82AAA0B9900D6B0B4 /* ValorantPedia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60E002DD2AAA0B9A00D6B0B4 /* Build configuration list for PBXNativeTarget "ValorantPedia" */;
+			buildPhases = (
+				60E002B52AAA0B9900D6B0B4 /* Sources */,
+				60E002B62AAA0B9900D6B0B4 /* Frameworks */,
+				60E002B72AAA0B9900D6B0B4 /* Resources */,
+				606941C82AE138C3000E80FF /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ValorantPedia;
+			productName = ValoarntPedia;
+			productReference = 60E002B92AAA0B9900D6B0B4 /* ValorantPedia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		60E002C82AAA0B9A00D6B0B4 /* ValorantPediaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60E002E02AAA0B9A00D6B0B4 /* Build configuration list for PBXNativeTarget "ValorantPediaTests" */;
+			buildPhases = (
+				60E002C52AAA0B9A00D6B0B4 /* Sources */,
+				60E002C62AAA0B9A00D6B0B4 /* Frameworks */,
+				60E002C72AAA0B9A00D6B0B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				60E002CB2AAA0B9A00D6B0B4 /* PBXTargetDependency */,
+			);
+			name = ValorantPediaTests;
+			packageProductDependencies = (
+				60F6535A2AD89E4600FADD7F /* InlineSnapshotTesting */,
+				60F6535C2AD89E4600FADD7F /* SnapshotTesting */,
+			);
+			productName = ValoarntPediaTests;
+			productReference = 60E002C92AAA0B9A00D6B0B4 /* ValorantPediaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		60E002B12AAA0B9900D6B0B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					60E002B82AAA0B9900D6B0B4 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					60E002C82AAA0B9A00D6B0B4 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 60E002B82AAA0B9900D6B0B4;
+					};
+				};
+			};
+			buildConfigurationList = 60E002B42AAA0B9900D6B0B4 /* Build configuration list for PBXProject "ValorantPedia" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 60E002B02AAA0B9900D6B0B4;
+			packageReferences = (
+				60F653592AD89E4600FADD7F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+			);
+			productRefGroup = 60E002BA2AAA0B9900D6B0B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60E002B82AAA0B9900D6B0B4 /* ValorantPedia */,
+				60E002C82AAA0B9A00D6B0B4 /* ValorantPediaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		60E002B72AAA0B9900D6B0B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60E002C42AAA0B9A00D6B0B4 /* Preview Assets.xcassets in Resources */,
+				60E002C12AAA0B9A00D6B0B4 /* Assets.xcassets in Resources */,
+				60F653692ADC400700FADD7F /* DeviceModels.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60E002C72AAA0B9A00D6B0B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		606941C82AE138C3000E80FF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Type a script or drag a script file from your workspace to insert its path.\nif [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60E002B52AAA0B9900D6B0B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60E002EF2AAA10FD00D6B0B4 /* AgentModel.swift in Sources */,
+				60F653652ADC3F8300FADD7F /* UIdevice+Extension.swift in Sources */,
+				607E05BE2ACEDD7000BD97E3 /* String+Extension.swift in Sources */,
+				605837772AABBD4100A65AA3 /* MainAgentCardView.swift in Sources */,
+				60E089242AC61FEA0008ED62 /* MapDetailView.swift in Sources */,
+				605837632AAA21A700A65AA3 /* AgentsOnboardingData.swift in Sources */,
+				60F653612ADC3EE200FADD7F /* SettingsView.swift in Sources */,
+				609BF5C52AC74E6000035F8A /* GunModel.swift in Sources */,
+				60E089262AC621E10008ED62 /* HeadingView.swift in Sources */,
+				60E002BF2AAA0B9900D6B0B4 /* MainView.swift in Sources */,
+				605837692AAB490E00A65AA3 /* AgentHeaderView.swift in Sources */,
+				60E913C52ACBEDA1009619BF /* Extension+Double.swift in Sources */,
+				605837652AAA249200A65AA3 /* StartButtonView.swift in Sources */,
+				60F6536B2ADC40DE00FADD7F /* SchameType+Extension.swift in Sources */,
+				60F653632ADC3F5500FADD7F /* EmailSupportModel.swift in Sources */,
+				605837792AAD001F00A65AA3 /* MapModel.swift in Sources */,
+				6008810C2ACBE78F00022CD1 /* GunDetailView.swift in Sources */,
+				605837732AAB69D900A65AA3 /* TabCurve.swift in Sources */,
+				6058375F2AAA20B400A65AA3 /* AgentCardView.swift in Sources */,
+				6058377B2AAD1DE300A65AA3 /* MapListView.swift in Sources */,
+				60E089222AC4BBD20008ED62 /* MapRowListView.swift in Sources */,
+				60E002EB2AAA0C2900D6B0B4 /* Bundle+Extension.swift in Sources */,
+				605837752AABB8CB00A65AA3 /* AgentListView.swift in Sources */,
+				605837712AAB649400A65AA3 /* CustomTabBar.swift in Sources */,
+				60E002ED2AAA0EC100D6B0B4 /* ValorantManager.swift in Sources */,
+				60E002F12AAA13C700D6B0B4 /* ViewModel.swift in Sources */,
+				6058376F2AAB60AB00A65AA3 /* AbilitiesView.swift in Sources */,
+				60887F272AC9E05700FCFD13 /* GunRowListView.swift in Sources */,
+				60E913C92ACBEE76009619BF /* GunSkinsView.swift in Sources */,
+				607E05BC2ACEDA9000BD97E3 /* GroupBoxRowView.swift in Sources */,
+				60E002BD2AAA0B9900D6B0B4 /* ValoarntPediaApp.swift in Sources */,
+				60F653672ADC3FD700FADD7F /* Data+Extension.swift in Sources */,
+				605837672AAB468D00A65AA3 /* DetailAgentView.swift in Sources */,
+				607E05BA2ACEB75300BD97E3 /* GunInfoView.swift in Sources */,
+				6058375D2AAA1FE000A65AA3 /* OnboardingView.swift in Sources */,
+				609BF5C72AC7574B00035F8A /* GunsListView.swift in Sources */,
+				6058376D2AAB4B9C00A65AA3 /* Color+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60E002C52AAA0B9A00D6B0B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60F6535F2AD89E8100FADD7F /* FirstScreenSnapshotTests.swift in Sources */,
+				60E002CE2AAA0B9A00D6B0B4 /* ValoarntPediaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		60E002CB2AAA0B9A00D6B0B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 60E002B82AAA0B9900D6B0B4 /* ValorantPedia */;
+			targetProxy = 60E002CA2AAA0B9A00D6B0B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		60E002DB2AAA0B9A00D6B0B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		60E002DC2AAA0B9A00D6B0B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		60E002DE2AAA0B9A00D6B0B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ValoarntPedia/Preview Content\"";
+				DEVELOPMENT_TEAM = A3SK267PDF;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.dytko.marcin.ValoarntPedia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		60E002DF2AAA0B9A00D6B0B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ValoarntPedia/Preview Content\"";
+				DEVELOPMENT_TEAM = A3SK267PDF;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.dytko.marcin.ValoarntPedia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		60E002E12AAA0B9A00D6B0B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A3SK267PDF;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.dytko.marcin.ValoarntPediaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ValorantPedia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ValorantPedia";
+			};
+			name = Debug;
+		};
+		60E002E22AAA0B9A00D6B0B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A3SK267PDF;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.dytko.marcin.ValoarntPediaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ValorantPedia.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ValorantPedia";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60E002B42AAA0B9900D6B0B4 /* Build configuration list for PBXProject "ValorantPedia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60E002DB2AAA0B9A00D6B0B4 /* Debug */,
+				60E002DC2AAA0B9A00D6B0B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60E002DD2AAA0B9A00D6B0B4 /* Build configuration list for PBXNativeTarget "ValorantPedia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60E002DE2AAA0B9A00D6B0B4 /* Debug */,
+				60E002DF2AAA0B9A00D6B0B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60E002E02AAA0B9A00D6B0B4 /* Build configuration list for PBXNativeTarget "ValorantPediaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60E002E12AAA0B9A00D6B0B4 /* Debug */,
+				60E002E22AAA0B9A00D6B0B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		60F653592AD89E4600FADD7F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.14.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		60F6535A2AD89E4600FADD7F /* InlineSnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60F653592AD89E4600FADD7F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = InlineSnapshotTesting;
+		};
+		60F6535C2AD89E4600FADD7F /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 60F653592AD89E4600FADD7F /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 60E002B12AAA0B9900D6B0B4 /* Project object */;
+}
