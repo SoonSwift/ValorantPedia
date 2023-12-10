@@ -86,9 +86,9 @@ struct MapDetailView: View {
     }
 }
 
-// MARK: - PREVIEW
-#Preview {
-    return NavigationView {
-        MapDetailView(map: MapInfo.previewExample)
-    }
-}
+//// MARK: - PREVIEW
+//#Preview {
+//    return NavigationView {
+//        MapDetailView(map: MapInfo.previewExample)
+//    }
+//}

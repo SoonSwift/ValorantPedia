@@ -26,6 +26,6 @@ struct HeadingView: View {
     }
 }
 
-#Preview {
-    HeadingView(headingImage: "photo.on.rectangle.angled", headingText: "Wilderness in Pictures")
-}
+//#Preview {
+//    HeadingView(headingImage: "photo.on.rectangle.angled", headingText: "Wilderness in Pictures")
+//}

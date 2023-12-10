@@ -37,8 +37,8 @@ struct MapRowListView: View {
     }
 }
 
-// MARK: - PREVIEW
-#Preview {
-    MapRowListView(map: MapInfo.previewExample)
-        .environmentObject(ViewModel())
-}
+//// MARK: - PREVIEW
+//#Preview {
+//    MapRowListView(map: MapInfo.previewExample)
+//        .environmentObject(ViewModel())
+//}

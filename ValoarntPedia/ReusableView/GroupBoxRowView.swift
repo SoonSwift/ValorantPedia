@@ -33,7 +33,7 @@ struct GroupBoxRowView: View {
     }
 }
 
-// MARK: - PRVIEW
-#Preview {
-    GroupBoxRowView(textHeader: "daw", textValue: "wda")
-}
+//// MARK: - PRVIEW
+//#Preview {
+//    GroupBoxRowView(textHeader: "daw", textValue: "wda")
+//}

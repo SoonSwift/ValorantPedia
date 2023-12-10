@@ -33,8 +33,8 @@ struct GunSkinsView: View {
         }
     }
 }
-
-// MARK: - PREVIEW
-#Preview {
-    GunSkinsView(guns: GunInfo.previewGun)
-}
+//
+//// MARK: - PREVIEW
+//#Preview {
+//    GunSkinsView(guns: GunInfo.previewGun)
+//}

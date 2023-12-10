@@ -11,7 +11,6 @@ import OSLog
 let logger = Logger()
 
 class ValorantManager {
-    
     let fetchableManager: Fetchable
     
     init(fetchableManager: Fetchable) {

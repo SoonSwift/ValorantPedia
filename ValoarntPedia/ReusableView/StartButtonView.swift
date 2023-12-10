@@ -10,13 +10,12 @@ import SwiftUI
 import SwiftUI
 
 struct StartButtonView: View {
-    // MARK: - PROPERTIES
-    @AppStorage("isOnboarding") var isOnBoarding: Bool?
-
+    let action: () -> Void
+    
     // MARK: - BODY
     var body: some View {
         Button {
-            isOnBoarding = false
+            action()
         } label: {
             HStack(spacing: 8) {
                 Text("Start")
@@ -37,7 +36,7 @@ struct StartButtonView: View {
 // MARK: - PREVIEW
 struct StartButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        StartButtonView()
+        StartButtonView {}
             .previewLayout(.sizeThatFits)
             .preferredColorScheme(.dark)
     }

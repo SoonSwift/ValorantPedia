@@ -6,28 +6,52 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
+
+struct OnboardingFeature: Reducer {
+    struct State: Equatable {
+        var data: [AgentOnboardingScreen] = AgentOnboardingScreen.data
+    }
+    
+    enum Action: Equatable {
+        case onAppear
+        case didTapStart
+    }
+    
+    var body: some ReducerOf<Self> {
+        EmptyReducer()
+    }
+}
 
 struct OnboardingView: View {
-    // MARK: - PROPERTIES
+    var store: StoreOf<OnboardingFeature>
     
-    @EnvironmentObject var viewModel: ViewModel
-    
-    // MARK: - BODY
     var body: some View {
-        TabView {
-            ForEach(AgentOnboardingScreen.data, id: \.self) { agent in
-                AgentCardView(agent: agent)
+        WithViewStore(store, observe: { $0 }) { viewStore in
+            TabView {
+                ForEach(viewStore.data, id: \.self) { agent in
+                    AgentCardView(agent: agent) {
+                        store.send(.didTapStart)
+                    }
+                }
             }
+            .tabViewStyle(.page)
+            .padding(.vertical, 20)
         }
-        .tabViewStyle(.page)
-        .padding(.vertical, 20)
+        .onAppear {
+            store.send(.onAppear)
+        }
     }
 }
 
 // MARK: - PREVIEW
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
-        OnboardingView()
-            .environmentObject(ViewModel())
+        OnboardingView(
+            store: Store(
+                initialState: OnboardingFeature.State(),
+                reducer: { OnboardingFeature() }
+            )
+        )
     }
 }

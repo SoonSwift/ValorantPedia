@@ -27,7 +27,7 @@ struct SettingsView: View {
                     List {
                 Section(header: Text("Info")) {
                     VStack(alignment: .leading) {
-                        Image(.logo)
+                        Image("logo")
                             .resizable()
                             .frame(width: 100, height: 100)
                             .clipShape(RoundedRectangle(cornerRadius: 20))
@@ -78,8 +78,8 @@ struct SettingsView: View {
         }
 }
 
-// MARK: - PREVIEW
-#Preview {
-    return SettingsView()
-        .environmentObject(ViewModel())
-}
+//// MARK: - PREVIEW
+//#Preview {
+//    return SettingsView()
+//        .environmentObject(ViewModel())
+//}

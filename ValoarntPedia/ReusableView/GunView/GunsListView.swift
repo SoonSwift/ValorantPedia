@@ -35,9 +35,9 @@ struct GunsListView: View {
         }
     }
 }
-
-// MARK: - PREVIEW
-#Preview {
-    GunsListView()
-        .environmentObject(ViewModel())
-}
+//
+//// MARK: - PREVIEW
+//#Preview {
+//    GunsListView()
+//        .environmentObject(ViewModel())
+//}

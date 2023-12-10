@@ -61,10 +61,10 @@ struct AgentListView: View {
 
 }
 
-// MARK: - PREVIEW
-struct AgentListView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-            .environmentObject(ViewModel())
-    }
-}
+//// MARK: - PREVIEW
+//struct AgentListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainView()
+//            .environmentObject(ViewModel())
+//    }
+//}

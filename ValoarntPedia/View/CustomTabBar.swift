@@ -47,13 +47,13 @@ struct CustomTabBar: View {
         }
     }
 }
-
-struct CoustomTabBar_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-            .environmentObject(ViewModel())
-    }
-}
+//
+//struct CoustomTabBar_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainView()
+//            .environmentObject(ViewModel())
+//    }
+//}
 
 struct TabBarButton: View {
     var tabItem: TabItem

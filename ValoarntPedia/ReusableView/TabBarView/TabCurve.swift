@@ -38,9 +38,9 @@ struct TabCurve: Shape {
     }
 }
 
-struct TabCurve_Previews: PreviewProvider {
-    static var previews: some View {
-        MainView()
-            .environmentObject(ViewModel())
-    }
-}
+//struct TabCurve_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainView()
+//            .environmentObject(ViewModel())
+//    }
+//}

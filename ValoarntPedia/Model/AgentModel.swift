@@ -86,7 +86,6 @@ struct AgentOnboardingScreen: Hashable {
     let description: String
     let photo: String
     let gradientColors: [Color]
-    
 }
 
 struct Ability: Decodable, Identifiable {

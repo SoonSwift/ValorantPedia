@@ -6,6 +6,32 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
+
+struct MainFeature: Reducer {
+    struct State: Equatable {
+        @BindingState
+        var selectedTab = TabItem.house
+    }
+    
+    enum Action: Equatable, BindableAction {
+        case binding(BindingAction<State>)
+        case onAppear
+    }
+    
+    var body: some ReducerOf<Self> {
+        BindingReducer()
+        Reduce { state, action in
+            switch action {
+            case .onAppear:
+                //viewModel.fetchAgenets()
+                return .none
+            case .binding:
+                return .none
+            }
+        }
+    }
+}
 
 struct MainView: View {
     // MARK: - PROPERTIES
@@ -24,37 +50,58 @@ struct MainView: View {
         }
     }
     
-    @EnvironmentObject var viewModel: ViewModel
-    @State private var selectedTab = TabItem.house
+   // @EnvironmentObject var viewModel: ViewModel
+   // @State private var selectedTab = TabItem.house
+    
+    var store: StoreOf<MainFeature>
     
     // MARK: - BODY
     var body: some View {
-        NavigationStack {
-            if selectedTab == .house {
-                AgentListView()
-                    .onAppear {
-                        viewModel.fetchAgenets()
+        WithViewStore(store, observe: { $0 }) { viewStore in
+            NavigationStack {
+                if viewStore.selectedTab == TabItem.house {
+                    VStack {
+                        Text("test1")
+                        Spacer()
                     }
-            } else if selectedTab == .map {
-                MapListView()
-            } else if selectedTab == .book {
-                GunsListView()
-            } else {
-                SettingsView()
+                    
+                    //                    AgentListView()
+                    //                        .onAppear {
+                    //                            store.send(.onAppear)
+                    //                        }
+                } else if viewStore.selectedTab == .map {
+                    //MapListView()
+                    VStack {
+                        Text("test2")
+                        Spacer()
+                    }
+                } else if viewStore.selectedTab == .book {
+                    //GunsListView()
+                    VStack {
+                        Text("test3")
+                        Spacer()
+                    }
+                } else {
+                    SettingsView()
+                }
+                ZStack(alignment: .bottom) {
+                    CustomTabBar(selectedTab: viewStore.$selectedTab)
+                }
             }
-            
-            ZStack(alignment: .bottom) {
-                CustomTabBar(selectedTab: $selectedTab)
-            }
+            .preferredColorScheme(selectedSchame)
         }
-        .preferredColorScheme(selectedSchame)
     }
 }
 
 // MARK: - PREVIEW
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
-            .environmentObject(ViewModel())
+        MainView(
+            store:
+                Store(
+                    initialState: MainFeature.State(),
+                    reducer: { MainFeature() }
+                )
+        )
     }
 }

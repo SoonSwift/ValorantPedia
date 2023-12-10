@@ -54,7 +54,7 @@ struct GunDetailView: View {
     }
 }
 
-// MARK: - PREVIEW
-#Preview {
-    GunDetailView(gun: GunInfo.previewGun)
-}
+//// MARK: - PREVIEW
+//#Preview {
+//    GunDetailView(gun: GunInfo.previewGun)
+//}

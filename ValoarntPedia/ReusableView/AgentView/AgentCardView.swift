@@ -12,6 +12,8 @@ struct AgentCardView: View {
     @State private var isAnimating: Bool = false
     
     var agent: AgentOnboardingScreen
+    let action: () -> Void
+    
     // MARK: - BODY
     var body: some View {
         ZStack {
@@ -37,7 +39,9 @@ struct AgentCardView: View {
                     .frame(maxWidth: 480)
                     
                 // BUTTON: START
-                StartButtonView()
+                StartButtonView {
+                    action()
+                }
             }
         }
         .onAppear {
@@ -54,6 +58,6 @@ struct AgentCardView: View {
 // MARK: - PREVIEW
 struct AgentCardView_Previews: PreviewProvider {
     static var previews: some View {
-        AgentCardView(agent: AgentOnboardingScreen.data[0])
+        AgentCardView(agent: AgentOnboardingScreen.data[0]){}
     }
 }
