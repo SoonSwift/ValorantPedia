@@ -9,6 +9,11 @@ import Foundation
 
 protocol Fetchable {
     func fetchData<T: Decodable>(url: String, completion: @escaping (Result<T, Error>) -> Void)
+    func fetchDataAsync<T: Decodable>(url: URL) async throws -> T
+}
+
+enum FetchableError: Error {
+    case decodeError
 }
 
 extension Bundle: Fetchable {
@@ -41,6 +46,17 @@ extension Bundle: Fetchable {
             }
         }
         task.resume()
+    }
+    
+    func fetchDataAsync<T: Decodable>(url: URL) async throws -> T {
+        let (data, _) = try await URLSession.shared.data(from: url)
+        
+        do {
+            let decodedData = try JSONDecoder().decode(T.self, from: data)
+            return decodedData
+        } catch {
+            throw FetchableError.decodeError
+        }
     }
 }
 

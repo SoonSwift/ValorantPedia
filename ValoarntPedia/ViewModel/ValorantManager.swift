@@ -10,7 +10,23 @@ import OSLog
 
 let logger = Logger()
 
-class ValorantManager {
+protocol ValorantManagerPrototype {
+    func getAgentsAsync() async throws -> AgentResult
+    func getGunsAsync() async throws -> GunResult
+}
+
+
+class MockValorantManager: ValorantManagerPrototype {
+    func getAgentsAsync() async throws -> AgentResult {
+        AgentResult.testModel
+    }
+    
+    func getGunsAsync() async throws -> GunResult {
+        GunResult.gunTestModel
+    }
+}
+
+class ValorantManager: ValorantManagerPrototype {
     let fetchableManager: Fetchable
     
     init(fetchableManager: Fetchable) {
@@ -28,16 +44,16 @@ class ValorantManager {
             }
         }
     }
-   
-    func getAgents(completion: @escaping (Result<AgentResult, Error>) -> Void) {
-        fetchData(fromURL: "https://valorant-api.com/v1/agents?isPlayableCharacter=true", completion: completion)
-    }
     
+    func getAgentsAsync() async throws -> AgentResult {
+        try await fetchableManager.fetchDataAsync(url: URL(string: "https://valorant-api.com/v1/agents?isPlayableCharacter=true")!)
+    }
+   
     func getMap(completion: @escaping (Result<MapResult, Error>) -> Void) {
         fetchData(fromURL: "https://valorant-api.com/v1/maps", completion: completion)
     }
-
-    func getGuns(completion: @escaping (Result<GunResult, Error>) -> Void) {
-        fetchData(fromURL: "https://valorant-api.com/v1/weapons", completion: completion)
+    
+    func getGunsAsync() async throws -> GunResult {
+        try await fetchableManager.fetchDataAsync(url: URL(string: "https://valorant-api.com/v1/weapons")!)
     }
 }

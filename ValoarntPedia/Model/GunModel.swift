@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GunResult: Decodable {
+struct GunResult: Decodable, Equatable {
     let status: Int
     let data: [GunInfo]
     
@@ -27,7 +27,7 @@ struct GunResult: Decodable {
     )
 }
 
-struct GunInfo: Decodable, Identifiable {
+struct GunInfo: Decodable, Identifiable, Equatable {
     let id = UUID()
     let displayName: String?
     let displayIcon: String?
@@ -51,7 +51,7 @@ struct GunInfo: Decodable, Identifiable {
     #endif
 }
 
-struct WeaponStats: Decodable {
+struct WeaponStats: Decodable, Equatable {
     let fireRate: Double?
     let magazineSize: Int?
     let runSpeedMultiplier: Double?
@@ -60,12 +60,12 @@ struct WeaponStats: Decodable {
     let wallPenetration: String?
 }
 
-struct ShopData: Decodable {
+struct ShopData: Decodable, Equatable {
     let cost: Int?
     let category: String?
 }
 
-struct SkinData: Decodable, Identifiable {
+struct SkinData: Decodable, Identifiable, Equatable {
     let id = UUID()
     let displayName: String?
     let displayIcon: String?

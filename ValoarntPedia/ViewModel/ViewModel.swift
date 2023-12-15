@@ -45,9 +45,9 @@ class ViewModel: ObservableObject {
     }
     
     func fetchAgenets() {
-        valorantManger.getAgents { [weak self] result in
-            self?.handleResult(result, for: .agents)
-        }
+//        valorantManger.getAgents { [weak self] result in
+//            self?.handleResult(result, for: .agents)
+//        }
     }
     
     func fetchMaps() {
@@ -57,8 +57,8 @@ class ViewModel: ObservableObject {
     }
     
     func fetchGuns() {
-        valorantManger.getGuns { [weak self] result in
-            self?.handleResult(result, for: .guns)
-        }
+//        valorantManger.getGuns { [weak self] result in
+//            self?.handleResult(result, for: .guns)
+//        }
     }
 }

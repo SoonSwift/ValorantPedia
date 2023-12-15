@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AgentResult: Decodable {
+struct AgentResult: Decodable, Equatable {
     let status: Int
     let data: [AgentInfo]
     
@@ -42,7 +42,7 @@ struct AgentResult: Decodable {
     #endif
 }
 
-struct AgentInfo: Decodable, Identifiable {
+struct AgentInfo: Decodable, Identifiable, Equatable {
     let id = UUID()
     let displayName: String
     let description: String
@@ -88,14 +88,14 @@ struct AgentOnboardingScreen: Hashable {
     let gradientColors: [Color]
 }
 
-struct Ability: Decodable, Identifiable {
+struct Ability: Decodable, Identifiable, Equatable {
     let id = UUID()
     let displayName: String
     let description: String
     let displayIcon: String?
 }
 
-struct RoleInfo: Decodable {
+struct RoleInfo: Decodable, Equatable {
     let displayName: String
     let description: String
     let displayIcon: String

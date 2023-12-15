@@ -12,21 +12,27 @@ struct MainFeature: Reducer {
     struct State: Equatable {
         @BindingState
         var selectedTab = TabItem.house
+        
+        var agents = AgentListFeature.State()
+        var guns = GunsListFeature.State()
     }
     
     enum Action: Equatable, BindableAction {
         case binding(BindingAction<State>)
         case onAppear
+        case agents(AgentListFeature.Action)
+        case guns(GunsListFeature.Action)
     }
     
     var body: some ReducerOf<Self> {
         BindingReducer()
+        Scope(state: \.agents, action: /Action.agents, child: AgentListFeature.init)
+        Scope(state: \.guns, action: /Action.guns, child: GunsListFeature.init)
         Reduce { state, action in
             switch action {
             case .onAppear:
-                //viewModel.fetchAgenets()
                 return .none
-            case .binding:
+            case .binding, .agents, .guns:
                 return .none
             }
         }
@@ -60,15 +66,12 @@ struct MainView: View {
         WithViewStore(store, observe: { $0 }) { viewStore in
             NavigationStack {
                 if viewStore.selectedTab == TabItem.house {
-                    VStack {
-                        Text("test1")
-                        Spacer()
-                    }
-                    
-                    //                    AgentListView()
-                    //                        .onAppear {
-                    //                            store.send(.onAppear)
-                    //                        }
+                    AgentListView(
+                        store: store.scope(
+                            state: \.agents,
+                            action: { .agents($0) }
+                        )
+                    )
                 } else if viewStore.selectedTab == .map {
                     //MapListView()
                     VStack {
@@ -76,11 +79,12 @@ struct MainView: View {
                         Spacer()
                     }
                 } else if viewStore.selectedTab == .book {
-                    //GunsListView()
-                    VStack {
-                        Text("test3")
-                        Spacer()
-                    }
+                    GunsListView(
+                        store: store.scope(
+                            state: \.guns,
+                            action: { .guns($0) }
+                        )
+                    )
                 } else {
                     SettingsView()
                 }
