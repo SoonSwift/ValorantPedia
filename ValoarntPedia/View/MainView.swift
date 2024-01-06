@@ -15,6 +15,7 @@ struct MainFeature: Reducer {
         
         var agents = AgentListFeature.State()
         var guns = GunsListFeature.State()
+        var maps = MapListFeature.State()
     }
     
     enum Action: Equatable, BindableAction {
@@ -22,17 +23,19 @@ struct MainFeature: Reducer {
         case onAppear
         case agents(AgentListFeature.Action)
         case guns(GunsListFeature.Action)
+        case maps(MapListFeature.Action)
     }
     
     var body: some ReducerOf<Self> {
         BindingReducer()
         Scope(state: \.agents, action: /Action.agents, child: AgentListFeature.init)
         Scope(state: \.guns, action: /Action.guns, child: GunsListFeature.init)
+        Scope(state: \.maps, action: /Action.maps, child: MapListFeature.init)
         Reduce { state, action in
             switch action {
             case .onAppear:
                 return .none
-            case .binding, .agents, .guns:
+            case .binding, .agents, .guns, .maps:
                 return .none
             }
         }
@@ -73,11 +76,12 @@ struct MainView: View {
                         )
                     )
                 } else if viewStore.selectedTab == .map {
-                    //MapListView()
-                    VStack {
-                        Text("test2")
-                        Spacer()
-                    }
+                    MapListView(
+                        store: store.scope(
+                            state: \.maps,
+                            action: { .maps($0) }
+                        )
+                    )
                 } else if viewStore.selectedTab == .book {
                     GunsListView(
                         store: store.scope(

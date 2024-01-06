@@ -13,6 +13,7 @@ let logger = Logger()
 protocol ValorantManagerPrototype {
     func getAgentsAsync() async throws -> AgentResult
     func getGunsAsync() async throws -> GunResult
+    func getMapsAsync() async throws -> MapResult
 }
 
 
@@ -23,6 +24,10 @@ class MockValorantManager: ValorantManagerPrototype {
     
     func getGunsAsync() async throws -> GunResult {
         GunResult.gunTestModel
+    }
+    
+    func getMapsAsync() async throws -> MapResult {
+        MapResult.mapTestModel
     }
 }
 
@@ -53,6 +58,10 @@ class ValorantManager: ValorantManagerPrototype {
         fetchData(fromURL: "https://valorant-api.com/v1/maps", completion: completion)
     }
     
+    func getMapsAsync() async throws -> MapResult {
+        try await fetchableManager.fetchDataAsync(url: URL(string: "https://valorant-api.com/v1/maps")!)
+    }
+   
     func getGunsAsync() async throws -> GunResult {
         try await fetchableManager.fetchDataAsync(url: URL(string: "https://valorant-api.com/v1/weapons")!)
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MapResult: Decodable {
+struct MapResult: Decodable, Equatable {
     let status: Int
     let data: [MapInfo]
     
@@ -22,7 +22,7 @@ struct MapResult: Decodable {
     )
 }
 
-struct MapInfo: Decodable, Identifiable {
+struct MapInfo: Decodable, Identifiable, Equatable {
     
     let id = UUID()
     let displayName: String
