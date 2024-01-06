@@ -48,9 +48,9 @@ struct DetailAgentView: View {
     }
 }
 
-// MARK: - PREVIEW
-struct DetailAgentView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailAgentView(agent: AgentInfo.agentPreview)
-    }
-}
+//// MARK: - PREVIEW
+//struct DetailAgentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DetailAgentView(agent: AgentInfo.agentPreview)
+//    }
+//}

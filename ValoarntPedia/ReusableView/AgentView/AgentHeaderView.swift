@@ -69,9 +69,9 @@ struct AgentHeaderView: View {
     }
 }
 
-// MARK: - PREVIEW
-struct AgentHeaderView_Previews: PreviewProvider {
-    static var previews: some View {
-        AgentHeaderView(agent: AgentInfo.agentPreview)
-    }
-}
+//// MARK: - PREVIEW
+//struct AgentHeaderView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AgentHeaderView(agent: AgentInfo.agentPreview)
+//    }
+//}

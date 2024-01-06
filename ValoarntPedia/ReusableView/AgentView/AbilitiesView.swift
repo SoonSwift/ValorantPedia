@@ -46,10 +46,10 @@ struct AbilitiesView: View {
         }
     }
 }
-
-// MARK: - PREVIEW
-struct AbilitiesView_Previews: PreviewProvider {
-    static var previews: some View {
-        AbilitiesView(agent: AgentInfo.agentPreview)
-    }
-}
+//
+//// MARK: - PREVIEW
+//struct AbilitiesView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AbilitiesView(agent: AgentInfo.agentPreview)
+//    }
+//}

@@ -16,20 +16,20 @@ protocol ValorantManagerPrototype {
     func getMapsAsync() async throws -> MapResult
 }
 
-
-class MockValorantManager: ValorantManagerPrototype {
-    func getAgentsAsync() async throws -> AgentResult {
-        AgentResult.testModel
-    }
-    
-    func getGunsAsync() async throws -> GunResult {
-        GunResult.gunTestModel
-    }
-    
-    func getMapsAsync() async throws -> MapResult {
-        MapResult.mapTestModel
-    }
-}
+//
+//class MockValorantManager: ValorantManagerPrototype {
+//    func getAgentsAsync() async throws -> AgentResult {
+//        AgentResult.testModel
+//    }
+//    
+//    func getGunsAsync() async throws -> GunResult {
+//        GunResult.gunTestModel
+//    }
+//    
+//    func getMapsAsync() async throws -> MapResult {
+//        MapResult.mapTestModel
+//    }
+//}
 
 class ValorantManager: ValorantManagerPrototype {
     let fetchableManager: Fetchable

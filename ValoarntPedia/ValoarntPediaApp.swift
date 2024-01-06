@@ -49,7 +49,7 @@ struct AppReducer: Reducer {
             case .main:
                 return .none
             }
-        }._printChanges()
+        }//._printChanges()
     }
 }
 

@@ -13,6 +13,8 @@ struct MainFeature: Reducer {
         @BindingState
         var selectedTab = TabItem.house
         
+        var visitedTabs = [TabItem.house]
+        
         var agents = AgentListFeature.State()
         var guns = GunsListFeature.State()
         var maps = MapListFeature.State()
@@ -35,6 +37,13 @@ struct MainFeature: Reducer {
             switch action {
             case .onAppear:
                 return .none
+                
+            case .binding(\.$selectedTab):
+                if !state.visitedTabs.contains(state.selectedTab) {
+                    state.visitedTabs.append(state.selectedTab)
+                }
+                return .none
+                
             case .binding, .agents, .guns, .maps:
                 return .none
             }
@@ -43,6 +52,17 @@ struct MainFeature: Reducer {
 }
 
 struct MainView: View {
+    struct ViewState: Equatable {
+        @BindingViewState
+        var selectedTab: TabItem
+        var visitedTabs: [TabItem]
+        
+        init(store: BindingViewStore<MainFeature.State>) {
+            self._selectedTab = store.$selectedTab
+            self.visitedTabs = store.visitedTabs
+        }
+    }
+    
     // MARK: - PROPERTIES
     
     @AppStorage("systemThemeVal") private var systemTheme: Int = SchameType.allCases.first!.rawValue
@@ -66,38 +86,69 @@ struct MainView: View {
     
     // MARK: - BODY
     var body: some View {
-        WithViewStore(store, observe: { $0 }) { viewStore in
-            NavigationStack {
-                if viewStore.selectedTab == TabItem.house {
-                    AgentListView(
-                        store: store.scope(
-                            state: \.agents,
-                            action: { .agents($0) }
+        WithViewStore(store, observe: ViewState.init) { viewStore in
+            ZStack {
+                NavigationStack {
+                    if viewStore.visitedTabs.contains(TabItem.house) {
+                        AgentListView(
+                            store: store.scope(
+                                state: \.agents,
+                                action: { .agents($0) }
+                            )
                         )
-                    )
-                } else if viewStore.selectedTab == .map {
-                    MapListView(
-                        store: store.scope(
-                            state: \.maps,
-                            action: { .maps($0) }
-                        )
-                    )
-                } else if viewStore.selectedTab == .book {
-                    GunsListView(
-                        store: store.scope(
-                            state: \.guns,
-                            action: { .guns($0) }
-                        )
-                    )
-                } else {
-                    SettingsView()
+                    }
                 }
-                ZStack(alignment: .bottom) {
-                    CustomTabBar(selectedTab: viewStore.$selectedTab)
+                .opacity(viewStore.selectedTab == TabItem.house ? 1 : 0)
+                .border(.red)
+                
+                NavigationStack {
+                    if viewStore.visitedTabs.contains(TabItem.map) {
+                        MapListView(
+                            store: store.scope(
+                                state: \.maps,
+                                action: { .maps($0) }
+                            )
+                        )
+                    }
                 }
+                .opacity(viewStore.selectedTab == .map ? 1 : 0)
+                .border(.yellow)
+                
+                NavigationStack {
+                    if viewStore.visitedTabs.contains(TabItem.book) {
+                        GunsListView(
+                            store: store.scope(
+                                state: \.guns,
+                                action: { .guns($0) }
+                            )
+                        )
+                    }
+                    
+                    
+                    
+                }
+                    .opacity(viewStore.selectedTab == .book ? 1 : 0)
+                    .border(.blue)
+                
+                NavigationStack {
+                    if viewStore.visitedTabs.contains(TabItem.gearshape) {
+                        SettingsView()
+                    }
+                    
+                    
+                        
+                }
+                .opacity(viewStore.selectedTab == .gearshape ? 1 : 0)
+                .border(.green)
             }
-            .preferredColorScheme(selectedSchame)
+            
+            
+            ZStack(alignment: .bottom) {
+                CustomTabBar(selectedTab: viewStore.$selectedTab)
+            }
+            
         }
+        .preferredColorScheme(selectedSchame)
     }
 }
 

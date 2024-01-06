@@ -75,10 +75,10 @@ struct MainAgentCardView: View {
         .cornerRadius(20)
     }
 }
-
-// MARK: - PREVIEW
-struct MainAgentCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainAgentCardView(agent: AgentInfo.agentPreview)
-    }
-}
+//
+//// MARK: - PREVIEW
+//struct MainAgentCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MainAgentCardView(agent: AgentInfo.agentPreview)
+//    }
+//}

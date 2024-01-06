@@ -11,7 +11,7 @@ import ComposableArchitecture
 private enum ValorantManagerKey: DependencyKey {
     static var liveValue: ValorantManagerPrototype = ValorantManager(fetchableManager: Bundle.main)
     //static var previewValue: ValorantManagerPrototype = MockValorantManager()
-    static var testValue: ValorantManagerPrototype = MockValorantManager()
+//    static var testValue: ValorantManagerPrototype = MockValorantManager()
 }
 
 extension DependencyValues {

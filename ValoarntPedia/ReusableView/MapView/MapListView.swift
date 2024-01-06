@@ -25,13 +25,19 @@ struct MapListFeature: Reducer {
         Reduce { state, action in
             switch action {
             case .onAppear:
-                return .run { send in
-                    await send(
-                        .onMapResult(
-                            TaskResult { try await valorantManager.getMapsAsync() }
+                if state.maps == nil {
+                    
+                    return .run { send in
+                        await send(
+                            .onMapResult(
+                                TaskResult { try await valorantManager.getMapsAsync() }
+                            )
                         )
-                    )
+                    }
+                } else {
+                    return .none
                 }
+                
             case .onMapResult(.success(let result)):
                 print("maps")
                 state.maps = result

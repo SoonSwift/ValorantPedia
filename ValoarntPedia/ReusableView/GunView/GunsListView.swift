@@ -25,13 +25,18 @@ struct GunsListFeature: Reducer {
         Reduce { state, action in
             switch action {
             case .onAppear:
-                return .run { send in
-                    await send(
-                        .onGunResult(
-                            TaskResult { try await valorantManager.getGunsAsync() }
+                if state.guns == nil {
+                    return .run { send in
+                        await send(
+                            .onGunResult(
+                                TaskResult { try await valorantManager.getGunsAsync() }
+                            )
                         )
-                    )
+                    }
+                } else {
+                    return .none
                 }
+                
             case .onGunResult(.success(let result)):
                 print("guns")
                 state.guns = result
